@@ -1,0 +1,19 @@
+#!/usr/local/bin/bash
+
+script=`basename $0`
+USAGE(){
+  echo "Usage: $script <url>"
+  exit 1
+}
+[ "$#" -eq 0 ] && USAGE >&2
+
+article=`curl -sS $1` || { echo "$1 is invalid url."; exit 1; }
+title=`echo "$article" | grep \<title\> | sed -e 's/<[^>]*>//g' | sed -e 's/^[[:blank:]]*//g' | numchar`
+[ -n "$title" ] || title="No title"
+
+articles_dir=$(dirname $0)/../articles
+current_time=$(date +%Y%m%d%H%M%S)
+echo "<a href=\""${1}"\">"${title}"</a>" > $articles_dir/$current_time
+
+exit 0
+

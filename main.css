@@ -1,0 +1,52 @@
+body {
+  margin: 20px auto;
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 36px;
+  margin-left: 14px;
+  text-shadow: 1px 1px 3px #333;
+}
+
+h2 {
+  font-size: 24px;
+  margin-left: 28px;
+  text-shadow: 1px 1px 3px #333;
+}
+
+p {
+  font-size: 18px;
+  margin-left: 40px;
+}
+
+ol {
+  margin:  20px;
+}
+
+li {
+  font-size: 18px;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:link {
+  color: #39596C;
+  border-bottom: 1px dotted #39596C;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  border-bottom: 1px solid #39596C;
+}
+
+a:active {
+  color: red;
+}
+
