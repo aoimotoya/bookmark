@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 dir=$(dirname $0)
 articles_dir=$dir/articles
